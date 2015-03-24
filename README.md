@@ -1,4 +1,6 @@
-## Project 5: a single page application featuring a map of your neighborhood or a neighborhood you would like to visit.
+## Project 5
+
+A single page application featuring a map of your neighborhood or a neighborhood you would like to visit.
 
 
 # How to run this application?
