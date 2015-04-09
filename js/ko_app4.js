@@ -44,7 +44,8 @@
 
         // build new weatherData object
         var newData = {
-            datetime :  now.toDateString () + ', ' + now.toLocaleTimeString (),
+            // datetime :  now.toDateString () + ', ' + now.toLocaleTimeString (),
+            datetime :  now.toDateString (),
             cityName : data.name,
             skies : data.weather [ 0 ].description,
             wind : 'wind : ' + Math.round ( data.wind.speed ) + ' mph from the ' + direction,
