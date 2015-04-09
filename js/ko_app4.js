@@ -40,7 +40,7 @@
             default:
                 direction = 'North';
                 break;
-        };
+        }
 
         // build new weatherData object
         var newData = {
@@ -55,7 +55,7 @@
 
         weatherData ( newData );
         console.log ( weatherData () );
-    };
+    }
 
 
     /**
@@ -77,7 +77,7 @@
             map = new google.maps.Map ( document.getElementById ( 'map-canvas' ), mapOptions );
             var bikeLayer = new google.maps.BicyclingLayer();
             bikeLayer.setMap( map );
-    };
+    }
 
 
     /**
@@ -93,8 +93,8 @@
             map.setCenter ( location );
         } else {
             map.setCenter ( defaultCenter );
-        };
-    };
+        }
+    }
 
 
     /**
@@ -110,7 +110,7 @@
         service.nearbySearch ( request, callback );
         map.setCenter ( defaultCenter );
         searchType ( 'Recommendations' );
-    };
+    }
 
 
     /**
@@ -127,7 +127,7 @@
         var service = new google.maps.places.PlacesService ( map );
         service.textSearch ( request, callback );
         searchType ( 'Search' );
-    };
+    }
 
 
     /**
@@ -155,13 +155,13 @@
                     details.website = '<a href =' + placeInfo.website + '>' + placeInfo.website + '</a>';
                 } else {
                     details.website = null;
-                };
+                }
                 details.reviews = reviews;
                 var i = searchData.indexOf ( place );
                 searchData ()[ i ].details ( details );
-            };
+            }
         } );
-    };
+    }
 
 
     /**
@@ -184,7 +184,7 @@
             }
         );
         Markers [ place.id ] = marker; // keep track of marker to remove it later
-    };
+    }
 
 
     /**
@@ -196,7 +196,7 @@
     function removeMarker ( place ) {
         Markers [ place.id ].setMap ( null );
         Markers [ place.id ].setIcon ( null );
-    };
+    }
 
 
     /**
@@ -221,7 +221,7 @@
             enableCloseButton: false
         };
         var panorama = new google.maps.StreetViewPanorama ( document.getElementById ( 'pano' ), panoOptions );
-    };
+    }
 
 
     /**
@@ -250,9 +250,9 @@
                         pagination.nextPage();
                     }
                 );
-            };
-        };
-    };
+            }
+        }
+    }
 
 
     /**
@@ -276,7 +276,7 @@
 
         buildMap ( mapOptions );
         getRecommendations ();
-    };
+    }
 
 
     /**
@@ -288,7 +288,7 @@
         google.maps.event.addDomListener ( window, 'load', initialize );
     } else {
         console.log ( "I don't know no google." );
-    };
+    }
 
 
     /**
@@ -344,8 +344,8 @@
                     self.shouldShowPano ( false );
                 } else {
                     userSearch ( self.searchString () );
-                };
-            };
+                }
+            }
             return true;
         };
 
@@ -385,7 +385,7 @@
                 addMarker ( data );
                 addPano ( data.geometry.location );
                 self.shouldShowPano ( true );
-            };
+            }
         };
 
         return true;
