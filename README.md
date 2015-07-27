@@ -1,6 +1,6 @@
 ## Project 5
 
-A single page application featuring a map of your neighborhood or a neighborhood you would like to visit.
+A single page application featuring a biking map and highlighting interesting places to visit in Cayucos, CA.
 
 
 # How to run this application?
